@@ -2,15 +2,12 @@ const os = require('os');
 const crypto = require('crypto');
 const express = require('express');
 const session = require('express-session');
-const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const multer = require('multer');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
-const he = require('he');
-const path = require('path');
+const path = require('node:path');
 const database = require('./database');
-const EventSource = require('eventsource');
 const rateLimit = require('express-rate-limit');
 const sharp = require('sharp');
 const { google } = require('googleapis');
@@ -20,7 +17,7 @@ const app = express();
 
 const thumbnailsDir = path.join(__dirname, 'thumbnails');
 if (!fs.existsSync(thumbnailsDir)) {
-    fs.mkdirSync(thumbnailsDir, { recursive: true });
+  fs.mkdirSync(thumbnailsDir, { recursive: true });
 }
 
 // ================== KONFIGURASI UTAMA ==================

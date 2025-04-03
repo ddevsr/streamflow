@@ -1,6 +1,5 @@
 const readline = require('readline');
 const database = require('./database');
-const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 
 const rl = readline.createInterface({

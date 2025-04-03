@@ -60,7 +60,7 @@ function createContainer(containerData) {
   let title = containerData?.title || 'Streaming Baru';
   let streamKey = containerData?.stream_key || '';
   let streamUrl = containerData?.stream_url || 'rtmp://a.rtmp.youtube.com/live2';
-  let bitrate = containerData?.bitrate || 3000;
+  let bitrate = containerData?.bitrate || 4000;
   let fps = containerData?.fps || 30;
   let resolution = containerData?.resolution || '1920:1080';
   let loop = containerData?.loop_enabled !== 0;
